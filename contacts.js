@@ -1,6 +1,3 @@
-// const fs = require("fs").promises;
-// const path = require("path");
-
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 import { nanoid } from "nanoid";
@@ -27,8 +24,6 @@ export async function removeContact(contactId) {
   const [contact] = contacts.splice(index, 1);
   await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
   return contact;
-
-  // ...твій код. Повертає об'єкт видаленого контакту. Повертає null, якщо контакт з таким id не знайдений.
 }
 
 export async function addContact(name, email, phone) {
@@ -42,5 +37,4 @@ export async function addContact(name, email, phone) {
   contacts.push(newContact);
   await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
   return newContact;
-  // ...твій код. Повертає об'єкт доданого контакту (з id).
 }
