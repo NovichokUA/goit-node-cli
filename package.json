@@ -5,13 +5,17 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "start:dev": "nodemon index"
   },
   "keywords": [],
   "author": "Valerii Babeshko <subr7333@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "commander": "^12.0.0"
+    "commander": "^12.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"

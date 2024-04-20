@@ -10,12 +10,11 @@ program
 program.parse();
 
 const options = program.opts();
-
 // TODO: рефакторити
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      listContacts();
+      await listContacts();
       break;
 
     case "get":
